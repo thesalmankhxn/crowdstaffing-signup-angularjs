@@ -1,14 +1,13 @@
 var formApp = angular.module('formApp', []);
 
 // fetches countries
-// formApp.controller('formController', function($scope, $http) {
-
+// formApp.run(function($scope, $http) {
 //     $scope.fetchCountries = function() {
-//         $http.get("https://api3-pegasi.uat.crowdstaffing.com/countries?dropdown=true")
-//             .then(function(res) {
-//                 $scope.countries = res.data.name;
-//                 console.log(countries);
-//             });
+//                 $http.get("https://api3-pegasi.uat.crowdstaffing.com/countries?dropdown=true")
+//                     .then(function(res) {
+//                         $scope.countries = res.data.name;
+//                         console.log(countries);
+//                     });
 //     }
 // });
 
@@ -261,6 +260,8 @@ formApp.controller('countryCtrl', function($scope) {
       {name: 'Zimbabwe', code: 'ZW'}
     ];   
 });
-// formApp.controller('formController', function($scope) {
+
+
+formApp.controller('formCtrl', function($scope) {
     
-// });
+});

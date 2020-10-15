@@ -218,6 +218,11 @@ nav a:hover {
   line-height: 18px;
 }
 
+.signup-form input.ng-invalid.ng-touched, .signup-form select.ng-invalid.ng-touched {
+  border: 1px solid #ed1c24;
+  box-shadow: 0 0 0 0.125em rgba(237, 28, 36, 0.25);
+}
+
 @media screen and (min-width: 999px) {
   .signup-form {
     border-top: 8px solid #09b288;
@@ -364,6 +369,10 @@ nav a:hover {
   padding: 2rem 0;
   margin: 0 2rem;
   border-top: 1px solid #858585;
+}
+
+.footer-bottom .fab {
+  color: #492e87;
 }
 
 .footer-bottom .left a {

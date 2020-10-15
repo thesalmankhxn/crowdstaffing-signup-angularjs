@@ -5,6 +5,7 @@
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
 
+
     img {
         width: 180px;
     }
@@ -38,6 +39,10 @@
     padding: 2rem 0;
     margin: 0 2rem;
     border-top: 1px solid #858585;
+
+    .fab {
+        color: $primary;
+    }
 
     .left {
         a {
