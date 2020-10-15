@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+// Fonts
+$font: 'Ubuntu', sans-serif;
+
+// Colors
+
+$primary: #492e87;
+$secondary: #09b288;
+$dark: #484848;
+$light: #ffffff;
+
+// Breakpoints
+$breakpoints: (
+    small: 499px,
+    medium: 699px,
+    large: 999px,
+    xlarge: 1399px
+);
+
+@mixin breakpoint($size){
+    $breakpoint-value: map-get($breakpoints, $size);
+
+    @media screen and (min-width: $breakpoint-value){
+        @content;
+    }
+}

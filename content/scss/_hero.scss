@@ -1,0 +1,86 @@
+.hero {
+    margin-top: 3.25rem;
+
+    &__image {
+
+        padding-top: 9.375rem;
+        background: url('https://jobs-pegasi.uat.crowdstaffing.com/_nuxt/img/signup-banner.0385b17.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+    }
+
+    &__title {
+
+        padding-top: 1.8rem;
+        font-size: 1.875rem;
+        font-weight: 400;
+        line-height: 2.8125rem;
+        color: $primary;
+    }
+
+    &__info {
+
+        padding: .75rem;
+        margin: .75rem 0;
+        font-size: 1.125rem;
+        font-weight: 200;
+        line-height: 1.6875rem;
+        color: $dark;
+    }
+
+    @include breakpoint(medium) {
+
+        margin-top: 4.625rem;
+
+        &__image {
+
+            padding-top: calc(100vw - 80%);
+        }
+
+        &__title {
+
+            font-size: 2.375rem;
+            line-height: 3.5625rem;
+        }
+
+        &__info {
+
+            font-size: 1.75rem;
+            line-height: 2.625rem;
+        }
+    }
+
+    @include breakpoint(large) {
+
+        &__title {
+            text-align: left;
+            margin-left: 10%;
+            width: 500px;
+        }
+
+        &__info {
+            text-align: left;
+            margin-left: 10%;
+            width: 468px;
+            padding: 0 !important;
+        }
+    }
+
+    @include breakpoint(xlarge) {
+
+        &__title {
+            text-align: left;
+            margin-left: 20%;
+            width: 700px;
+        }
+
+        &__info {
+            text-align: left;
+            margin-left: 20%;
+            width: 658px;
+            padding: 0 !important;
+        }
+    }
+}

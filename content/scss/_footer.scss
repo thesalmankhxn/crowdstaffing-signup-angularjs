@@ -1,0 +1,85 @@
+.footer {
+
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+
+    img {
+        width: 180px;
+    }
+
+    a {
+        text-decoration: none;
+        padding: 1rem;
+        color: $dark;
+
+        &:hover {
+            color: #858585;
+        }
+    } 
+
+    @include breakpoint (large) {
+        padding: 3rem 2rem;
+        grid-template-columns: repeat(10, 1fr);
+        column-gap: 20px;
+
+        a {
+            font-size: .875rem;
+            padding: 0;
+        }
+    }
+}
+
+.footer-bottom {
+    display: grid;
+    grid-template-columns: 35% 1fr;
+    align-items: center;
+    padding: 2rem 0;
+    margin: 0 2rem;
+    border-top: 1px solid #858585;
+
+    .left {
+        a {
+            padding-right: .6rem;
+            i {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .right {
+        color: $dark;
+        font-size: .8125rem;
+        line-height: 1.21875rem;
+        margin-left: auto;
+    }
+
+    @include breakpoint(medium) {
+
+        .left {
+            a {
+                i {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+
+        .right {
+            font-size: 1rem;
+        }
+    }
+
+    @include breakpoint(large) {
+
+        .left {
+            a {
+                padding-right: 1.5rem;
+            }
+        }
+
+        .right {
+            font-size: .8125rem;
+        }
+    }
+}

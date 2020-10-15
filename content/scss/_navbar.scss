@@ -1,0 +1,49 @@
+nav {
+    width: 100%;
+    background-color: #fff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.25rem;
+    padding: 0 .7rem;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 30;
+
+    img {
+        width: 13.5265rem;
+        position: relative;
+    }
+
+    a {
+        position: relative;
+        font-size: 1rem;
+        font-weight: 700;
+        text-decoration: none;
+        color: $light;
+        background-color: $secondary;
+        padding: 0.4375rem 2rem;
+        border-radius: 1.5rem;
+
+        &:hover {
+            background-color: #066b52;
+        }
+    }
+
+    // media query, mixin defined in variables files
+    @include breakpoint(medium) {
+        height: 4.625rem;
+
+        img {
+            width: 20.375rem;
+        }
+
+        a {
+            padding: .65rem 2.75rem;
+        }
+    }
+}

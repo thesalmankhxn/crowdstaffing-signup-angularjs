@@ -1,0 +1,21 @@
+html {
+    font-size: 100%;
+}
+
+*, *::after, *:before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.container {
+    padding: 0 32px !important;
+}

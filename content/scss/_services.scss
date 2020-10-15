@@ -1,0 +1,23 @@
+.services {
+
+    h3 {
+        font-size: .875rem;
+        font-weight: 200;
+        line-height: 1.3125rem;
+        color: $dark;
+        padding: 0 4rem;
+        margin-bottom: 25px;
+    }
+
+    @include breakpoint(large) {
+        margin-left: 22%;
+        margin-top: 2.2rem;
+
+        h3 {
+            padding: 0;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            width: 540px;
+        }
+    }
+}
