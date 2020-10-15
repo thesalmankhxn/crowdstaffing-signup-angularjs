@@ -223,6 +223,11 @@ nav a:hover {
   box-shadow: 0 0 0 0.125em rgba(237, 28, 36, 0.25);
 }
 
+.signup-form input[disabled="disabled"] {
+  opacity: .4;
+  cursor: not-allowed !important;
+}
+
 @media screen and (min-width: 999px) {
   .signup-form {
     border-top: 8px solid #09b288;
