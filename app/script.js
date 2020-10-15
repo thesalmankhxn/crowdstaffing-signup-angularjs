@@ -262,6 +262,36 @@ formApp.controller('countryCtrl', function($scope) {
 });
 
 
-formApp.controller('formCtrl', function($scope) {
-    
+formApp.controller('postServiceCtrl', function($scope, $http) {
+    $scope.fName = null;
+    $scope.lName = null;
+    $scope.email = null;
+    $scope.phone = null;
+    $scope.city = null;
+    $scope.zipCode = null;
+    $scope.state = null;
+    $scope.country = null;
+    $scope.file = null;
+
+    $scope.postData = function(fName, lName, email, phone, city, zipCode, state, country, file) {
+        // creating an object that will pass to the service
+
+        var data = {
+            fName: fName,
+            lName: lName, 
+            email: email, 
+            phone: phone,
+            city: city,
+            zipCode: zipCode,
+            state: state, 
+            country: country, 
+            file: file
+        }
+
+        // calling api
+        $http.post("https://api3-pegasi.uat.crowdstaffing.com/talents", JSON.stringify(data))
+                .then(function(res) {
+                    console.log(res);
+                })
+    }
 });

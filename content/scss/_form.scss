@@ -108,13 +108,20 @@
         }
     }
 
-    @include breakpoint(xlarge) {
-        width: 420px;
-        top: 38%;
-        right: 20%;
+    @include breakpoint (xlarge) {
+        width: 400px;
+        top: 30%;
+        right: 10%;
 
         input[type=submit] {
             font-size: 1rem;
         }
+    }
+
+    @include breakpoint(xxlarge) {
+        width: 420px;
+        top: 38%;
+        right: 20%;
+
     }
 }
