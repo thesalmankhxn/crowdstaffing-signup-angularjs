@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="signupFormApp">
+<html lang="en" ng-app="formApp">
 
 <head>
     <meta charset="UTF-8">
@@ -44,33 +44,36 @@
         </section>
 
         <!-- Form -->
-        <section class="signup-form text-center">
-            <h3>Sign Up to Crowdstaffing</h3>
-            <input type="text" placeholder="First name">
-            <input type="text" placeholder="Last name">
-            <input type="email" placeholder="Email Address">
-            <input type="text" placeholder="Phone number">
-            <input type="text" placeholder="City">
-            <input type="text" placeholder="Enter Zip or Postal Code">
-            <input type="text" placeholder="Select State">
-            <select ng-model="myVar" value="Select Country">
-                <option value="">
-              </select>
-            <input type="file" accept=".pdf, .doc, .docx, .xls, .xlsx">
-            <p>By continuing you agree to Crowdstaffing's
-                <a href="https://www.crowdstaffing.com/privacy-policy" target="_blank">Privacy policy</a> and
-                <a href="https://www.crowdstaffing.com/terms-of-use" target="_blank">Terms of Use.</a></p>
-            <input type="submit" value="SIGN UP TO CROWDSTAFFING">
+        <section class="signup-form text-center" >
+            <!-- added novalidate to remove client side browser validation -->
+            <form name="employeeForm" novalidate role="form">
+                <h3>Sign Up to Crowdstaffing</h3>
+                <input type="text" placeholder="First name" ng-model="user.fName" ng-required />
+                <input type="text" placeholder="Last name" ng-model="user.lName" ng-required />
+                <input type="email" placeholder="Email Address" ng-model="user.email" ng-required />
+                <input type="text" placeholder="Phone number" ng-model="user.phone" />
+                <input type="text" placeholder="City" ng-model="user.city" />
+                <input type="text" placeholder="Enter Zip or Postal Code" ng-model="user.zipCode" ng-required />
+                <input type="text" placeholder="Select State" ng-model="user.state" />
+                <select ng-controller="countryCtrl" value="Select Country" ng-model="user.country" ng-required >
+                    <option value="">Select Country</option>
+                    <option ng-repeat="country in countries" value="{{country.name}}">{{country.name}}</option>
+                </select>
+                <input type="file" accept=".pdf, .doc, .docx, .xls, .xlsx" ng-model="user.file" />
+                <p>By continuing you agree to Crowdstaffing's
+                    <a href="https://www.crowdstaffing.com/privacy-policy" target="_blank">Privacy policy</a> and
+                    <a href="https://www.crowdstaffing.com/terms-of-use" target="_blank">Terms of Use.</a></p>
+                <input type="submit" value="SIGN UP TO CROWDSTAFFING"  />
+            </form>
         </section>
 
         <!-- Services -->
         <section class="services">
             <h3>Access a who's who of employers across North America</h3>
-            <div>
-                <h3>
-                    Get matched to amazing roles based on your abilities and aspirations
-                </h3>
-            </div>
+            <h3>
+                Get matched to amazing roles based on your abilities and aspirations
+            </h3>
+
             <h3>Choose from full-time or contract options</h3>
             <h3>A talent advisor will walk you through every opportunity from confirming fit to interview best practices
             </h3>
@@ -81,12 +84,13 @@
         <section class="signup-images">
             <div class="container">
                 <img src="https://jobs-pegasi.uat.crowdstaffing.com/_nuxt/img/NBC-universal-f.112a4fb.png"
-                alt="NBCUniversal logo">
-            <img src="https://jobs-pegasi.uat.crowdstaffing.com/_nuxt/img/SJI-f.c2085f9.png" alt="SJI logo">
-            <img src="https://jobs-pegasi.uat.crowdstaffing.com/_nuxt/img/KPMG-f.f412a41.png" alt="KPMG Logo">
-            <img src="https://jobs-pegasi.uat.crowdstaffing.com/_nuxt/img/Radial-f.9a04222.png" alt="Radial logo">
-            <img src="https://jobs-pegasi.uat.crowdstaffing.com/_nuxt/img/Illumina-f.b564e35.png" alt="illumina logo">
-            <img src="https://jobs-pegasi.uat.crowdstaffing.com/_nuxt/img/Holman-f.a2d676a.png" alt="Holman logo">
+                    alt="NBCUniversal logo">
+                <img src="https://jobs-pegasi.uat.crowdstaffing.com/_nuxt/img/SJI-f.c2085f9.png" alt="SJI logo">
+                <img src="https://jobs-pegasi.uat.crowdstaffing.com/_nuxt/img/KPMG-f.f412a41.png" alt="KPMG Logo">
+                <img src="https://jobs-pegasi.uat.crowdstaffing.com/_nuxt/img/Radial-f.9a04222.png" alt="Radial logo">
+                <img src="https://jobs-pegasi.uat.crowdstaffing.com/_nuxt/img/Illumina-f.b564e35.png"
+                    alt="illumina logo">
+                <img src="https://jobs-pegasi.uat.crowdstaffing.com/_nuxt/img/Holman-f.a2d676a.png" alt="Holman logo">
             </div>
         </section>
     </main>

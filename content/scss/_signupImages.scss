@@ -15,8 +15,14 @@
             width: 100%;
             padding: 12px 10px;
         }
+
+        @include breakpoint(medium) {
+            width: 515px;
+            margin-left: 4%;
+            padding-left: 0;
+        }
     
-        @include breakpoint(large) {
+        @include breakpoint(xlarge) {
             width: 700px;
             margin-left: 18%;
             padding-left: 0;

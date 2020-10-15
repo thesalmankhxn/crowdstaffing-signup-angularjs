@@ -9,7 +9,23 @@
         margin-bottom: 25px;
     }
 
-    @include breakpoint(large) {
+    @include breakpoint(medium) {
+        margin-left: 12%;
+        margin-top: 2.2rem;
+
+        h3 {
+            padding: 0;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            width: 348px;
+
+            &:last-child {
+                padding-bottom: 4rem;
+            }
+        }
+    }
+
+    @include breakpoint(xlarge) {
         margin-left: 22%;
         margin-top: 2.2rem;
 

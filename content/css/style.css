@@ -197,6 +197,11 @@ nav a:hover {
   height: 2.5rem;
   padding: .4375rem 2rem;
   margin-bottom: 2.75rem;
+  outline: none;
+}
+
+.signup-form input[type=submit]:hover {
+  background-color: #066b52;
 }
 
 .signup-form select {
@@ -215,15 +220,16 @@ nav a:hover {
 
 @media screen and (min-width: 999px) {
   .signup-form {
+    border-top: 8px solid #09b288;
     position: absolute;
     width: 300px;
     right: 13%;
     top: 23%;
     box-shadow: 0 0 30px 0 rgba(10, 10, 10, 0.1);
+    padding: 0 1.5rem 0;
   }
   .signup-form h3 {
     font-size: 1.75rem;
-    border-top: 8px solid #09b288;
   }
   .signup-form input[type=submit] {
     font-size: .75rem;
@@ -232,9 +238,12 @@ nav a:hover {
 
 @media screen and (min-width: 1399px) {
   .signup-form {
-    width: 450px;
+    width: 420px;
     top: 38%;
     right: 20%;
+  }
+  .signup-form input[type=submit] {
+    font-size: 1rem;
   }
 }
 
@@ -247,7 +256,23 @@ nav a:hover {
   margin-bottom: 25px;
 }
 
-@media screen and (min-width: 999px) {
+@media screen and (min-width: 699px) {
+  .services {
+    margin-left: 12%;
+    margin-top: 2.2rem;
+  }
+  .services h3 {
+    padding: 0;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    width: 348px;
+  }
+  .services h3:last-child {
+    padding-bottom: 4rem;
+  }
+}
+
+@media screen and (min-width: 1399px) {
   .services {
     margin-left: 22%;
     margin-top: 2.2rem;
@@ -282,7 +307,15 @@ nav a:hover {
   padding: 12px 10px;
 }
 
-@media screen and (min-width: 999px) {
+@media screen and (min-width: 699px) {
+  .signup-images .container {
+    width: 515px;
+    margin-left: 4%;
+    padding-left: 0;
+  }
+}
+
+@media screen and (min-width: 1399px) {
   .signup-images .container {
     width: 700px;
     margin-left: 18%;
