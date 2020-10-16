@@ -189,7 +189,7 @@ formApp.controller('postServiceCtrl', function($scope, $http) {
     $scope.submitForm = function() {
         // creating an object that will pass to the service
 
-        var data = $scope.user;
+        // var data = $scope.user;
         // calling api
         // $http.post("https://api3-pegasi.uat.crowdstaffing.com/talents", JSON.stringify(data))
         //         .then(function(res) {
