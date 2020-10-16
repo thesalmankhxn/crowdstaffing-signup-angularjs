@@ -46,35 +46,35 @@
         <!-- Form -->
         <section class="signup-form text-center" ng-controller="postServiceCtrl">
             <!-- added novalidate to remove client side browser validation -->
-            <form name="employeeForm" novalidate role="form">
+            <form name="employeeForm" ng-submit="submitForm()" novalidate role="form">
                 <h3>Sign Up to Crowdstaffing</h3>
-                <input type="text" placeholder="First name" name="fName" ng-model="fName" ng-required="true" />
+                <input type="text" placeholder="First name" name="fName" ng-model="user.first_name" ng-required="true" />
                 <span ng-show="employeeForm.fName.$touched && employeeForm.fName.$invalid">
                     <small style="color: red; display: block;">Enter a valid first name</small>
                 </span>
 
-                <input type="text" placeholder="Last name" name="lName" ng-model="lName" ng-required="true" />
+                <input type="text" placeholder="Last name" name="lName" ng-model="user.last_name" ng-required="true" />
                 <span ng-show="employeeForm.lName.$touched && employeeForm.lName.$invalid">
                     <small style="color: red; display: block;">Enter a valid last name</small>
                 </span>
 
-                <input type="email" placeholder="Email Address" name="email" ng-model="email" ng-required="true" />
+                <input type="email" placeholder="Email Address" name="email" ng-model="user.email" ng-required="true" />
                 <span ng-show="employeeForm.email.$touched && employeeForm.email.$invalid">
                     <small style="color: red; display: block;">Enter a valid email</small>
                 </span>
 
-                <input type="text" placeholder="Phone number" name="phone" ng-model="phone" />
+                <input type="text" placeholder="Phone number" name="phone" ng-model="user.phones" />
 
-                <input type="text" placeholder="City" name="city" ng-model="city" />
+                <input type="text" placeholder="City" name="city" ng-model="user.city" />
 
-                <input type="text" placeholder="Enter Zip or Postal Code" name="zipCode" ng-model="zipCode" ng-required="true" />
+                <input type="text" placeholder="Enter Zip or Postal Code" name="zipCode" ng-model="user.postal_code" ng-required="true" />
                 <span ng-show="employeeForm.zipCode.$touched && employeeForm.zipCode.$invalid">
                     <small style="color: red; display: block;">Enter a valid zip or postal code</small>
                 </span>
 
-                <input type="text" placeholder="Select State" ng-model="state" />
+                <input type="text" placeholder="Select State" ng-model="user.state" />
 
-                <select ng-controller="countryCtrl" value="Select Country" name="country" ng-model="country" ng-required="true" >
+                <select ng-controller="countryCtrl" value="Select Country" name="country" ng-model="user.country" ng-required="true" >
                     <option value="">Select Country</option>
                     <option ng-repeat="country in countries" value="{{country.name}}">{{country.name}}</option>
                 </select>
@@ -82,12 +82,12 @@
                     <small style="color: red; display: block;">Select a country</small>
                 </span>
 
-                <input type="file" accept=".pdf, .doc, .docx, .xls, .xlsx" ng-model="file" />
+                <input type="file" accept=".pdf, .doc, .docx, .xls, .xlsx" ng-model="user.file" />
                 <p>By continuing you agree to Crowdstaffing's
                     <a href="https://www.crowdstaffing.com/privacy-policy" target="_blank">Privacy policy</a> and
                     <a href="https://www.crowdstaffing.com/terms-of-use" target="_blank">Terms of Use.</a></p>
 
-                <input type="submit" value="SIGN UP TO CROWDSTAFFING" ng-click="postData(fName, lName, email, phone, city, zipCode, state, country, file)" ng-disabled="employeeForm.$invalid" />
+                <input type="submit" value="SIGN UP TO CROWDSTAFFING" ng-click="Submit" ng-disabled="employeeForm.$invalid" />
             </form>
         </section>
 

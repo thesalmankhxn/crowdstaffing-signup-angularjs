@@ -14,284 +14,197 @@ var formApp = angular.module('formApp', []);
 formApp.controller('countryCtrl', function($scope) {
     $scope.name = 'World';
   
-    $scope.countries = [ 
-      {name: 'Afghanistan', code: 'AF'},
-      {name: 'Åland Islands', code: 'AX'},
-      {name: 'Albania', code: 'AL'},
-      {name: 'Algeria', code: 'DZ'},
-      {name: 'American Samoa', code: 'AS'},
-      {name: 'Andorra', code: 'AD'},
-      {name: 'Angola', code: 'AO'},
-      {name: 'Anguilla', code: 'AI'},
-      {name: 'Antarctica', code: 'AQ'},
-      {name: 'Antigua and Barbuda', code: 'AG'},
-      {name: 'Argentina', code: 'AR'},
-      {name: 'Armenia', code: 'AM'},
-      {name: 'Aruba', code: 'AW'},
-      {name: 'Australia', code: 'AU'},
-      {name: 'Austria', code: 'AT'},
-      {name: 'Azerbaijan', code: 'AZ'},
-      {name: 'Bahamas', code: 'BS'},
-      {name: 'Bahrain', code: 'BH'},
-      {name: 'Bangladesh', code: 'BD'},
-      {name: 'Barbados', code: 'BB'},
-      {name: 'Belarus', code: 'BY'},
-      {name: 'Belgium', code: 'BE'},
-      {name: 'Belize', code: 'BZ'},
-      {name: 'Benin', code: 'BJ'},
-      {name: 'Bermuda', code: 'BM'},
-      {name: 'Bhutan', code: 'BT'},
-      {name: 'Bolivia', code: 'BO'},
-      {name: 'Bosnia and Herzegovina', code: 'BA'},
-      {name: 'Botswana', code: 'BW'},
-      {name: 'Bouvet Island', code: 'BV'},
-      {name: 'Brazil', code: 'BR'},
-      {name: 'British Indian Ocean Territory', code: 'IO'},
-      {name: 'Brunei Darussalam', code: 'BN'},
-      {name: 'Bulgaria', code: 'BG'},
-      {name: 'Burkina Faso', code: 'BF'},
-      {name: 'Burundi', code: 'BI'},
-      {name: 'Cambodia', code: 'KH'},
-      {name: 'Cameroon', code: 'CM'},
-      {name: 'Canada', code: 'CA'},
-      {name: 'Cape Verde', code: 'CV'},
-      {name: 'Cayman Islands', code: 'KY'},
-      {name: 'Central African Republic', code: 'CF'},
-      {name: 'Chad', code: 'TD'},
-      {name: 'Chile', code: 'CL'},
-      {name: 'China', code: 'CN'},
-      {name: 'Christmas Island', code: 'CX'},
-      {name: 'Cocos (Keeling) Islands', code: 'CC'},
-      {name: 'Colombia', code: 'CO'},
-      {name: 'Comoros', code: 'KM'},
-      {name: 'Congo', code: 'CG'},
-      {name: 'Congo, The Democratic Republic of the', code: 'CD'},
-      {name: 'Cook Islands', code: 'CK'},
-      {name: 'Costa Rica', code: 'CR'},
-      {name: 'Cote D\'Ivoire', code: 'CI'},
-      {name: 'Croatia', code: 'HR'},
-      {name: 'Cuba', code: 'CU'},
-      {name: 'Cyprus', code: 'CY'},
-      {name: 'Czech Republic', code: 'CZ'},
-      {name: 'Denmark', code: 'DK'},
-      {name: 'Djibouti', code: 'DJ'},
-      {name: 'Dominica', code: 'DM'},
-      {name: 'Dominican Republic', code: 'DO'},
-      {name: 'Ecuador', code: 'EC'},
-      {name: 'Egypt', code: 'EG'},
-      {name: 'El Salvador', code: 'SV'},
-      {name: 'Equatorial Guinea', code: 'GQ'},
-      {name: 'Eritrea', code: 'ER'},
-      {name: 'Estonia', code: 'EE'},
-      {name: 'Ethiopia', code: 'ET'},
-      {name: 'Falkland Islands (Malvinas)', code: 'FK'},
-      {name: 'Faroe Islands', code: 'FO'},
-      {name: 'Fiji', code: 'FJ'},
-      {name: 'Finland', code: 'FI'},
-      {name: 'France', code: 'FR'},
-      {name: 'French Guiana', code: 'GF'},
-      {name: 'French Polynesia', code: 'PF'},
-      {name: 'French Southern Territories', code: 'TF'},
-      {name: 'Gabon', code: 'GA'},
-      {name: 'Gambia', code: 'GM'},
-      {name: 'Georgia', code: 'GE'},
-      {name: 'Germany', code: 'DE'},
-      {name: 'Ghana', code: 'GH'},
-      {name: 'Gibraltar', code: 'GI'},
-      {name: 'Greece', code: 'GR'},
-      {name: 'Greenland', code: 'GL'},
-      {name: 'Grenada', code: 'GD'},
-      {name: 'Guadeloupe', code: 'GP'},
-      {name: 'Guam', code: 'GU'},
-      {name: 'Guatemala', code: 'GT'},
-      {name: 'Guernsey', code: 'GG'},
-      {name: 'Guinea', code: 'GN'},
-      {name: 'Guinea-Bissau', code: 'GW'},
-      {name: 'Guyana', code: 'GY'},
-      {name: 'Haiti', code: 'HT'},
-      {name: 'Heard Island and Mcdonald Islands', code: 'HM'},
-      {name: 'Holy See (Vatican City State)', code: 'VA'},
-      {name: 'Honduras', code: 'HN'},
-      {name: 'Hong Kong', code: 'HK'},
-      {name: 'Hungary', code: 'HU'},
-      {name: 'Iceland', code: 'IS'},
-      {name: 'India', code: 'IN'},
-      {name: 'Indonesia', code: 'ID'},
-      {name: 'Iran, Islamic Republic Of', code: 'IR'},
-      {name: 'Iraq', code: 'IQ'},
-      {name: 'Ireland', code: 'IE'},
-      {name: 'Isle of Man', code: 'IM'},
-      {name: 'Israel', code: 'IL'},
-      {name: 'Italy', code: 'IT'},
-      {name: 'Jamaica', code: 'JM'},
-      {name: 'Japan', code: 'JP'},
-      {name: 'Jersey', code: 'JE'},
-      {name: 'Jordan', code: 'JO'},
-      {name: 'Kazakhstan', code: 'KZ'},
-      {name: 'Kenya', code: 'KE'},
-      {name: 'Kiribati', code: 'KI'},
-      {name: 'Korea, Democratic People\'s Republic of', code: 'KP'},
-      {name: 'Korea, Republic of', code: 'KR'},
-      {name: 'Kuwait', code: 'KW'},
-      {name: 'Kyrgyzstan', code: 'KG'},
-      {name: 'Lao People\'s Democratic Republic', code: 'LA'},
-      {name: 'Latvia', code: 'LV'},
-      {name: 'Lebanon', code: 'LB'},
-      {name: 'Lesotho', code: 'LS'},
-      {name: 'Liberia', code: 'LR'},
-      {name: 'Libyan Arab Jamahiriya', code: 'LY'},
-      {name: 'Liechtenstein', code: 'LI'},
-      {name: 'Lithuania', code: 'LT'},
-      {name: 'Luxembourg', code: 'LU'},
-      {name: 'Macao', code: 'MO'},
-      {name: 'Macedonia, The Former Yugoslav Republic of', code: 'MK'},
-      {name: 'Madagascar', code: 'MG'},
-      {name: 'Malawi', code: 'MW'},
-      {name: 'Malaysia', code: 'MY'},
-      {name: 'Maldives', code: 'MV'},
-      {name: 'Mali', code: 'ML'},
-      {name: 'Malta', code: 'MT'},
-      {name: 'Marshall Islands', code: 'MH'},
-      {name: 'Martinique', code: 'MQ'},
-      {name: 'Mauritania', code: 'MR'},
-      {name: 'Mauritius', code: 'MU'},
-      {name: 'Mayotte', code: 'YT'},
-      {name: 'Mexico', code: 'MX'},
-      {name: 'Micronesia, Federated States of', code: 'FM'},
-      {name: 'Moldova, Republic of', code: 'MD'},
-      {name: 'Monaco', code: 'MC'},
-      {name: 'Mongolia', code: 'MN'},
-      {name: 'Montserrat', code: 'MS'},
-      {name: 'Morocco', code: 'MA'},
-      {name: 'Mozambique', code: 'MZ'},
-      {name: 'Myanmar', code: 'MM'},
-      {name: 'Namibia', code: 'NA'},
-      {name: 'Nauru', code: 'NR'},
-      {name: 'Nepal', code: 'NP'},
-      {name: 'Netherlands', code: 'NL'},
-      {name: 'Netherlands Antilles', code: 'AN'},
-      {name: 'New Caledonia', code: 'NC'},
-      {name: 'New Zealand', code: 'NZ'},
-      {name: 'Nicaragua', code: 'NI'},
-      {name: 'Niger', code: 'NE'},
-      {name: 'Nigeria', code: 'NG'},
-      {name: 'Niue', code: 'NU'},
-      {name: 'Norfolk Island', code: 'NF'},
-      {name: 'Northern Mariana Islands', code: 'MP'},
-      {name: 'Norway', code: 'NO'},
-      {name: 'Oman', code: 'OM'},
-      {name: 'Pakistan', code: 'PK'},
-      {name: 'Palau', code: 'PW'},
-      {name: 'Palestinian Territory, Occupied', code: 'PS'},
-      {name: 'Panama', code: 'PA'},
-      {name: 'Papua New Guinea', code: 'PG'},
-      {name: 'Paraguay', code: 'PY'},
-      {name: 'Peru', code: 'PE'},
-      {name: 'Philippines', code: 'PH'},
-      {name: 'Pitcairn', code: 'PN'},
-      {name: 'Poland', code: 'PL'},
-      {name: 'Portugal', code: 'PT'},
-      {name: 'Puerto Rico', code: 'PR'},
-      {name: 'Qatar', code: 'QA'},
-      {name: 'Reunion', code: 'RE'},
-      {name: 'Romania', code: 'RO'},
-      {name: 'Russian Federation', code: 'RU'},
-      {name: 'Rwanda', code: 'RW'},
-      {name: 'Saint Helena', code: 'SH'},
-      {name: 'Saint Kitts and Nevis', code: 'KN'},
-      {name: 'Saint Lucia', code: 'LC'},
-      {name: 'Saint Pierre and Miquelon', code: 'PM'},
-      {name: 'Saint Vincent and the Grenadines', code: 'VC'},
-      {name: 'Samoa', code: 'WS'},
-      {name: 'San Marino', code: 'SM'},
-      {name: 'Sao Tome and Principe', code: 'ST'},
-      {name: 'Saudi Arabia', code: 'SA'},
-      {name: 'Senegal', code: 'SN'},
-      {name: 'Serbia and Montenegro', code: 'CS'},
-      {name: 'Seychelles', code: 'SC'},
-      {name: 'Sierra Leone', code: 'SL'},
-      {name: 'Singapore', code: 'SG'},
-      {name: 'Slovakia', code: 'SK'},
-      {name: 'Slovenia', code: 'SI'},
-      {name: 'Solomon Islands', code: 'SB'},
-      {name: 'Somalia', code: 'SO'},
-      {name: 'South Africa', code: 'ZA'},
-      {name: 'South Georgia and the South Sandwich Islands', code: 'GS'},
-      {name: 'Spain', code: 'ES'},
-      {name: 'Sri Lanka', code: 'LK'},
-      {name: 'Sudan', code: 'SD'},
-      {name: 'Suriname', code: 'SR'},
-      {name: 'Svalbard and Jan Mayen', code: 'SJ'},
-      {name: 'Swaziland', code: 'SZ'},
-      {name: 'Sweden', code: 'SE'},
-      {name: 'Switzerland', code: 'CH'},
-      {name: 'Syrian Arab Republic', code: 'SY'},
-      {name: 'Taiwan, Province of China', code: 'TW'},
-      {name: 'Tajikistan', code: 'TJ'},
-      {name: 'Tanzania, United Republic of', code: 'TZ'},
-      {name: 'Thailand', code: 'TH'},
-      {name: 'Timor-Leste', code: 'TL'},
-      {name: 'Togo', code: 'TG'},
-      {name: 'Tokelau', code: 'TK'},
-      {name: 'Tonga', code: 'TO'},
-      {name: 'Trinidad and Tobago', code: 'TT'},
-      {name: 'Tunisia', code: 'TN'},
-      {name: 'Turkey', code: 'TR'},
-      {name: 'Turkmenistan', code: 'TM'},
-      {name: 'Turks and Caicos Islands', code: 'TC'},
-      {name: 'Tuvalu', code: 'TV'},
-      {name: 'Uganda', code: 'UG'},
-      {name: 'Ukraine', code: 'UA'},
-      {name: 'United Arab Emirates', code: 'AE'},
-      {name: 'United Kingdom', code: 'GB'},
-      {name: 'United States', code: 'US'},
-      {name: 'United States Minor Outlying Islands', code: 'UM'},
-      {name: 'Uruguay', code: 'UY'},
-      {name: 'Uzbekistan', code: 'UZ'},
-      {name: 'Vanuatu', code: 'VU'},
-      {name: 'Venezuela', code: 'VE'},
-      {name: 'Vietnam', code: 'VN'},
-      {name: 'Virgin Islands, British', code: 'VG'},
-      {name: 'Virgin Islands, U.S.', code: 'VI'},
-      {name: 'Wallis and Futuna', code: 'WF'},
-      {name: 'Western Sahara', code: 'EH'},
-      {name: 'Yemen', code: 'YE'},
-      {name: 'Zambia', code: 'ZM'},
-      {name: 'Zimbabwe', code: 'ZW'}
-    ];   
+    $scope.countries = [
+        {
+          id: '80c17587-1891-48e1-9447-d53b553534f2',
+          name: 'United States',
+          abbr: 'US'
+        },
+        {
+          id: '2c4ab035-9113-45f4-92a1-d5b8664fca02',
+          name: 'Canada',
+          abbr: 'CA'
+        },
+        {
+          id: 'ee55546a-1552-4c0b-b456-d39095bbf593',
+          name: 'United Kingdom (Great Britain)',
+          abbr: 'GB'
+        },
+        {
+          id: '1f7a5dc2-5c40-4e08-86b5-130f46c1391d',
+          name: 'India',
+          abbr: 'IN'
+        },
+        {
+          id: '163a1f9f-0d56-4165-996e-c7ab2ae8a717',
+          name: 'Australia',
+          abbr: 'AU'
+        },
+        {
+          id: '13bdddb7-94f4-4bc2-8eae-83c864fdce7d',
+          name: 'New Zealand',
+          abbr: 'NZ'
+        },
+        {
+          id: 'd867eaac-a1b0-4d5f-a1a2-529c42a256df',
+          name: 'Austria',
+          abbr: 'AT'
+        },
+        {
+          id: '66683f60-ab38-46c5-89ab-3963c02664a6',
+          name: 'Belgium',
+          abbr: 'BE'
+        },
+        {
+          id: 'fbbb9c83-baaf-4ea2-9d87-987a82635856',
+          name: 'Bulgaria',
+          abbr: 'BG'
+        },
+        {
+          id: 'd3682823-dc28-4a54-be36-23efbb3c953c',
+          name: 'Croatia',
+          abbr: 'HR'
+        },
+        {
+          id: 'fb50b216-c357-42e4-9386-9adac93b6573',
+          name: 'Cyprus',
+          abbr: 'CY'
+        },
+        {
+          id: '5b86d6df-4e3e-439f-bfaf-9bf404c010c3',
+          name: 'Czech Republic',
+          abbr: 'CZ'
+        },
+        {
+          id: '830d6bf9-c93c-4d0b-9908-b60dc7edcf19',
+          name: 'Denmark',
+          abbr: 'DK'
+        },
+        {
+          id: 'cf7a5f6a-9fec-4511-99a9-f10e806afdc6',
+          name: 'Estonia',
+          abbr: 'EE'
+        },
+        {
+          id: 'b7487537-b35a-463f-98df-e23f19fd749e',
+          name: 'Finland',
+          abbr: 'FI'
+        },
+        {
+          id: '5416880e-dce4-4f35-9e75-ea07a14f4de7',
+          name: 'France',
+          abbr: 'FR'
+        },
+        {
+          id: '3177f928-70b9-4998-929d-a6ba414be8ed',
+          name: 'Germany',
+          abbr: 'DE'
+        },
+        {
+          id: 'bf81c3f1-c7ee-4792-83ae-d14e1eb317f5',
+          name: 'Greece',
+          abbr: 'GR'
+        },
+        {
+          id: '3e36161d-f435-49ff-b402-1be1bf2f4286',
+          name: 'Hungary',
+          abbr: 'HU'
+        },
+        {
+          id: 'c293a875-e0ed-4757-8334-504a599a0ed1',
+          name: 'Ireland',
+          abbr: 'IE'
+        },
+        {
+          id: 'ab072b67-57ed-4c08-833b-0d0a96f0955f',
+          name: 'Italy',
+          abbr: 'IT'
+        },
+        {
+          id: 'c4776de5-be94-420a-9d3f-5bd0909d9e1c',
+          name: 'Latvia',
+          abbr: 'LV'
+        },
+        {
+          id: 'e5941db6-78b1-4a86-97eb-5dc74c73b617',
+          name: 'Lithuania',
+          abbr: 'LT'
+        },
+        {
+          id: 'db3307c9-96e7-4bf8-aed4-1406e80d1db3',
+          name: 'Luxembourg',
+          abbr: 'LU'
+        },
+        {
+          id: 'af0ce1a8-5d6a-408c-b868-1d10f7b3eda0',
+          name: 'Malta',
+          abbr: 'MT'
+        },
+        {
+          id: '89e648a6-0f4b-48c3-91df-1ae519a8440f',
+          name: 'Netherlands',
+          abbr: 'NL'
+        },
+        {
+          id: '7ba2b3f0-b0de-4a4a-81cc-7f19f46c094c',
+          name: 'Poland',
+          abbr: 'PL'
+        },
+        {
+          id: '2a657928-779a-411a-b23f-f515757ffdd9',
+          name: 'Portugal',
+          abbr: 'PT'
+        },
+        {
+          id: '04cd284b-e74f-4bff-82a3-05fc19518d79',
+          name: 'Romania',
+          abbr: 'RO'
+        },
+        {
+          id: 'a8dd9d4d-015a-43d6-bb57-3be25cdeb230',
+          name: 'Slovakia',
+          abbr: 'SK'
+        },
+        {
+          id: '8c73c5ad-5e42-47ee-875b-92c9f8635cc6',
+          name: 'Slovenia',
+          abbr: 'SI'
+        },
+        {
+          id: '38346aff-6d7d-486b-a5d2-932581e3ad5f',
+          name: 'Spain',
+          abbr: 'ES'
+        },
+        {
+          id: 'c059c561-5bad-4c2a-9be6-f7caf11e9df9',
+          name: 'Sweden',
+          abbr: 'SE'
+        }
+      ];
 });
 
 
 formApp.controller('postServiceCtrl', function($scope, $http) {
-    $scope.fName = null;
-    $scope.lName = null;
-    $scope.email = null;
-    $scope.phone = null;
-    $scope.city = null;
-    $scope.zipCode = null;
-    $scope.state = null;
-    $scope.country = null;
-    $scope.file = null;
 
-    $scope.postData = function(fName, lName, email, phone, city, zipCode, state, country, file) {
+    $scope.submitForm = function() {
         // creating an object that will pass to the service
 
-        var data = {
-            fName: fName,
-            lName: lName, 
-            email: email, 
-            phone: phone,
-            city: city,
-            zipCode: zipCode,
-            state: state, 
-            country: country, 
-            file: file
-        }
-
         // calling api
-        $http.post("https://api3-pegasi.uat.crowdstaffing.com/talents", JSON.stringify(data))
-                .then(function(res) {
-                    console.log(res);
-                })
+        // $http.post("https://api3-pegasi.uat.crowdstaffing.com/talents", JSON.stringify(data))
+        //         .then(function(res) {
+        //             console.log(res);
+        //         })
+        $http({
+            method: 'POST',
+            url: 'https://api3-pegasi.uat.crowdstaffing.com/talents',
+            data: $scope.user,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}
+        })
+        .then(function(res){
+            console.log(res);
+        })
+        .catch(function(err){
+            console.log(err);
+        });
     }
 });
