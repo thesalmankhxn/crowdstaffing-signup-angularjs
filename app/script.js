@@ -61,3 +61,5 @@ formApp.controller('postServiceCtrl', function ($scope, $http) {
       });
   }
 });
+
+formApp.controller("countryCtrl", "psotServiceCtrl", ["$scope", "$http", countryCtrl, postServiceCtrl]);

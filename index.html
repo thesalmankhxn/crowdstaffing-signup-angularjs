@@ -45,9 +45,12 @@
 
         <!-- Form -->
         <section class="signup-form text-center" ng-controller="postServiceCtrl">
+
             <!-- added novalidate to remove client side browser validation -->
             <form name="employeeForm" ng-submit="submitForm()" novalidate role="form">
+                
                 <h3>Sign Up to Crowdstaffing</h3>
+
                 <input type="text" placeholder="First name" name="fName" ng-model="user.first_name" ng-required="true" />
                 <span ng-show="employeeForm.fName.$touched && employeeForm.fName.$invalid">
                     <small style="color: red; display: block;">Enter a valid first name</small>
