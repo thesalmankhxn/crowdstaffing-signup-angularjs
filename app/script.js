@@ -3,16 +3,6 @@
 var formApp = angular.module('formApp', []);
 
 // fetches countries
-// formApp.run(function($scope, $http) {
-//     $scope.fetchCountries = function() {
-//                 $http.get("https://api3-pegasi.uat.crowdstaffing.com/countries?dropdown=true")
-//                     .then(function(res) {
-//                         $scope.countries = res.data.name;
-//                         console.log(countries);
-//                     });
-//     }
-// });
-
 formApp.controller('countryCtrl', function ($scope, $http) {
   
   $http.get("https://api3-pegasi.uat.crowdstaffing.com/countries?dropdown=true")
