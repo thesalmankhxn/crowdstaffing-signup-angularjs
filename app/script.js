@@ -59,5 +59,6 @@ formApp.controller('postServiceCtrl', function ($scope, $http) {
       .catch(function (err) {
         console.log(err);
       });
-  }
+  };
+
 });
