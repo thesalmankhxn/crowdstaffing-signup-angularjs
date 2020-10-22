@@ -1,9 +1,9 @@
-// not required on the version above 1.2 - inside an IIFE to avoid Global
+// not required on the version above 1.2 - code inside an IIFE to avoid Global declarations
 
 // creating a module formApp
 var formApp = angular.module('formApp', []);
 
-// fetches countries
+// controller for fetching countries
 formApp.controller('countryCtrl', function ($scope, $http) {
   
   $http.get("https://api3-pegasi.uat.crowdstaffing.com/countries?dropdown=true")
