@@ -1,5 +1,6 @@
 // not required on the version above 1.2 - inside an IIFE to avoid Global
 
+// creating a module formApp
 var formApp = angular.module('formApp', []);
 
 // fetches countries
@@ -17,7 +18,7 @@ formApp.controller('countryCtrl', function ($scope, $http) {
       
 });
 
-
+// controller for posting form data
 formApp.controller('postServiceCtrl', function ($scope, $http) {
 
   $scope.submitForm = function () {
