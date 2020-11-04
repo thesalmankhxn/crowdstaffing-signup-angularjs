@@ -5,6 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Segment -->
+    <script>
+        !function () {
+            var analytics = window.analytics = window.analytics || []; if (!analytics.initialize) if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice."); else {
+                analytics.invoked = !0; analytics.methods = ["trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset", "group", "track", "ready", "alias", "debug", "page", "once", "off", "on", "addSourceMiddleware", "addIntegrationMiddleware", "setAnonymousId", "addDestinationMiddleware"]; analytics.factory = function (e) { return function () { var t = Array.prototype.slice.call(arguments); t.unshift(e); analytics.push(t); return analytics } }; for (var e = 0; e < analytics.methods.length; e++) { var key = analytics.methods[e]; analytics[key] = analytics.factory(key) } analytics.load = function (key, e) { var t = document.createElement("script"); t.type = "text/javascript"; t.async = !0; t.src = "https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js"; var n = document.getElementsByTagName("script")[0]; n.parentNode.insertBefore(t, n); analytics._loadOptions = e }; analytics.SNIPPET_VERSION = "4.13.1";
+                analytics.load("7AGUSzAd4j7WoiGAkz7CpgmusHnCUqA0");
+                analytics.page();
+            }
+        }();
+    </script>
+
     <!-- Title -->
     <title>Sign up and find a job you'll love</title>
 
@@ -48,10 +59,11 @@
 
             <!-- added novalidate to remove client side browser validation -->
             <form name="employeeForm" ng-submit="submitForm()" novalidate role="form">
-                
+
                 <h3>Sign Up to Crowdstaffing</h3>
 
-                <input type="text" placeholder="First name" name="fName" ng-model="user.first_name" ng-required="true" />
+                <input type="text" placeholder="First name" name="fName" ng-model="user.first_name"
+                    ng-required="true" />
                 <span ng-show="employeeForm.fName.$touched && employeeForm.fName.$invalid">
                     <small style="color: red; display: block;">Enter a valid first name</small>
                 </span>
@@ -70,14 +82,16 @@
 
                 <input type="text" placeholder="City" name="city" ng-model="user.city" />
 
-                <input type="text" placeholder="Enter Zip or Postal Code" name="zipCode" ng-model="user.postal_code" ng-required="true" />
+                <input type="text" placeholder="Enter Zip or Postal Code" name="zipCode" ng-model="user.postal_code"
+                    ng-required="true" />
                 <span ng-show="employeeForm.zipCode.$touched && employeeForm.zipCode.$invalid">
                     <small style="color: red; display: block;">Enter a valid zip or postal code</small>
                 </span>
 
                 <input type="text" placeholder="Select State" ng-model="user.state" />
 
-                <select ng-controller="countryCtrl" value="Select Country" name="country" ng-model="user.country" ng-required="true" >
+                <select ng-controller="countryCtrl" value="Select Country" name="country" ng-model="user.country"
+                    ng-required="true">
                     <option value="">Select Country</option>
                     <option ng-repeat="country in countries" value="{{country.name}}">{{country.name}}</option>
                 </select>
@@ -90,7 +104,8 @@
                     <a href="https://www.crowdstaffing.com/privacy-policy" target="_blank">Privacy policy</a> and
                     <a href="https://www.crowdstaffing.com/terms-of-use" target="_blank">Terms of Use.</a></p>
 
-                <input type="submit" value="SIGN UP TO CROWDSTAFFING" ng-click="Submit" ng-disabled="employeeForm.$invalid" />
+                <input type="submit" value="SIGN UP TO CROWDSTAFFING" ng-click="Submit"
+                    ng-disabled="employeeForm.$invalid" />
             </form>
         </section>
 
